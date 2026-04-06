@@ -1,0 +1,391 @@
+# Portal Scanner Configuration — Business Analyst / Scrum Master
+# Customized for BA, Scrum Master, and Product-adjacent roles.
+# Focus: Remote + DC/MD/VA metro area.
+
+# -- Title filter --
+# At least 1 positive must match AND 0 negatives must match (case-insensitive).
+
+title_filter:
+  positive:
+    # -- BA / Analyst roles --
+    - "Business Analyst"
+    - "Senior Business Analyst"
+    - "Business Systems Analyst"
+    - "Systems Analyst"
+    - "Requirements Analyst"
+    - "Process Analyst"
+    - "IT Business Analyst"
+    - "ERP Analyst"
+    - "Data Analyst"
+    - "Operations Analyst"
+    # -- Scrum / Agile roles --
+    - "Scrum Master"
+    - "Agile Coach"
+    - "Agile Lead"
+    - "Delivery Lead"
+    - "Release Train Engineer"
+    # -- Product-adjacent roles --
+    - "Product Owner"
+    - "Product Manager"
+    - "Technical Product Manager"
+    - "Program Analyst"
+    # -- Process & transformation --
+    - "Process Improvement"
+    - "Business Process"
+    - "Transformation"
+    - "Change Management"
+    - "Business Intelligence"
+  negative:
+    - "Intern"
+    - "Internship"
+    - "Co-Op"
+    - "Blockchain"
+    - "Web3"
+    - "Crypto"
+    - "COBOL"
+    - "Mainframe"
+    - "Embedded"
+    - "Firmware"
+    - "FPGA"
+    - "Salesforce Admin"
+    - "Graphic Designer"
+    - "Content Writer"
+    - "Marketing Analyst"
+  seniority_boost:
+    - "Senior"
+    - "Lead"
+    - "Principal"
+    - "Staff"
+    - "Manager"
+    - "Director"
+
+# -- Search queries --
+# Each query triggers a WebSearch. Targeted at major job portals.
+
+search_queries:
+
+  # -- Ashby --
+  - name: Ashby — Business Analyst
+    query: 'site:jobs.ashbyhq.com "Business Analyst" OR "Senior Business Analyst" remote'
+    enabled: true
+
+  - name: Ashby — Scrum Master
+    query: 'site:jobs.ashbyhq.com "Scrum Master" OR "Agile Coach" OR "Delivery Lead" remote'
+    enabled: true
+
+  # -- Greenhouse --
+  - name: Greenhouse — Business Analyst
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Business Analyst" OR "Systems Analyst" remote'
+    enabled: true
+
+  - name: Greenhouse — Scrum & Agile
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Scrum Master" OR "Agile Coach" OR "Product Owner" remote'
+    enabled: true
+
+  - name: Greenhouse — Process & ERP
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Business Process" OR "ERP Analyst" OR "Business Systems Analyst" remote'
+    enabled: true
+
+  # -- Lever --
+  - name: Lever — BA & Scrum
+    query: 'site:jobs.lever.co "Business Analyst" OR "Scrum Master" OR "Product Owner" remote'
+    enabled: true
+
+  # -- Wellfound (startups) --
+  - name: Wellfound — BA & Product
+    query: 'site:wellfound.com "Business Analyst" OR "Product Owner" OR "Scrum Master" remote'
+    enabled: true
+
+  # -- Workable --
+  - name: Workable — BA Roles
+    query: 'site:apply.workable.com "Business Analyst" OR "Scrum Master" OR "Agile" remote'
+    enabled: true
+
+  # -- Government / Public Sector --
+  - name: USAJobs — BA & Program Analyst
+    query: 'site:usajobs.gov "Business Analyst" OR "Program Analyst" OR "IT Specialist" Maryland OR Washington OR remote'
+    enabled: true
+
+  - name: Government Contractor — BA
+    query: '"Business Analyst" OR "Scrum Master" "clearance" OR "public trust" Maryland OR Virginia OR "Washington DC" OR remote'
+    enabled: true
+
+  # -- Major job boards (broader discovery) --
+  - name: LinkedIn — BA DMV Area
+    query: 'site:linkedin.com/jobs "Business Analyst" OR "Scrum Master" Maryland OR Virginia OR "Washington DC" OR remote'
+    enabled: true
+
+  - name: Indeed — BA Remote
+    query: 'site:indeed.com "Senior Business Analyst" OR "Scrum Master" remote'
+    enabled: true
+
+# -- Tracked companies --
+# Companies whose career pages are checked directly.
+# Trimmed list — focusing on companies that regularly hire BA/Scrum roles
+# in the DC metro, remote-friendly, or gov contractor space.
+
+tracked_companies:
+
+  # -- Gov Contractors / Consulting (heavy BA hiring) --
+
+  - name: Booz Allen Hamilton
+    careers_url: https://careers.boozallen.com
+    scan_method: websearch
+    scan_query: 'site:careers.boozallen.com "Business Analyst" OR "Scrum Master" OR "Agile"'
+    notes: "McLean VA. Major gov contractor, constant BA openings."
+    enabled: true
+
+  - name: Deloitte
+    careers_url: https://apply.deloitte.com
+    scan_method: websearch
+    scan_query: 'site:apply.deloitte.com "Business Analyst" OR "Scrum Master" OR "Agile" Maryland OR Virginia OR remote'
+    notes: "Consulting. Heavy federal practice in DC metro."
+    enabled: true
+
+  - name: Accenture Federal
+    careers_url: https://www.accenture.com/us-en/careers
+    scan_method: websearch
+    scan_query: 'site:accenture.com/us-en/careers "Business Analyst" OR "Scrum Master" federal OR government'
+    notes: "Federal consulting arm. Arlington VA."
+    enabled: true
+
+  - name: ICF
+    careers_url: https://www.icf.com/careers
+    scan_method: websearch
+    scan_query: 'site:icf.com/careers "Business Analyst" OR "Agile" OR "Scrum"'
+    notes: "Reston VA. Gov consulting, IT modernization."
+    enabled: true
+
+  - name: SAIC
+    careers_url: https://jobs.saic.com
+    scan_method: websearch
+    scan_query: 'site:jobs.saic.com "Business Analyst" OR "Scrum Master"'
+    notes: "Reston VA. Defense & federal IT."
+    enabled: true
+
+  - name: ManTech
+    careers_url: https://www.mantech.com/careers
+    scan_method: websearch
+    scan_query: 'site:mantech.com/careers "Business Analyst" OR "Agile" OR "Scrum"'
+    notes: "Herndon VA. Federal IT services."
+    enabled: true
+
+  # -- More Gov Contractors / Mid-Tier (DMV heavy hitters) --
+
+  - name: Leidos
+    careers_url: https://careers.leidos.com
+    scan_method: websearch
+    scan_query: 'site:careers.leidos.com "Business Analyst" OR "Scrum Master" OR "Agile"'
+    notes: "Reston VA. Major defense/civil IT. Constant BA hiring."
+    enabled: true
+
+  - name: CGI Federal
+    careers_url: https://cgi.njoyn.com
+    scan_method: websearch
+    scan_query: '"CGI" "Business Analyst" OR "Scrum Master" Maryland OR Virginia OR "Washington DC"'
+    notes: "Fairfax VA. Federal IT consulting, heavy Agile shops."
+    enabled: true
+
+  - name: Peraton
+    careers_url: https://careers.peraton.com
+    scan_method: websearch
+    scan_query: 'site:careers.peraton.com "Business Analyst" OR "Scrum Master"'
+    notes: "Herndon VA. Defense & intel IT services."
+    enabled: true
+
+  - name: Maximus
+    careers_url: https://careers.maximus.com
+    scan_method: websearch
+    scan_query: 'site:careers.maximus.com "Business Analyst" OR "Scrum Master" OR "Agile"'
+    notes: "Tysons VA. Gov health & human services IT."
+    enabled: true
+
+  - name: General Dynamics IT
+    careers_url: https://www.gdit.com/careers
+    scan_method: websearch
+    scan_query: 'site:gdit.com/careers "Business Analyst" OR "Scrum Master"'
+    notes: "Falls Church VA. Defense & federal IT modernization."
+    enabled: true
+
+  - name: Noblis
+    careers_url: https://careers.noblis.org
+    scan_method: websearch
+    scan_query: 'site:careers.noblis.org "Business Analyst" OR "Agile" OR "Scrum"'
+    notes: "Reston VA. Nonprofit federal consulting. Good culture."
+    enabled: true
+
+  - name: Guidehouse
+    careers_url: https://guidehouse.com/careers
+    scan_method: websearch
+    scan_query: 'site:guidehouse.com/careers "Business Analyst" OR "Scrum Master" OR "Agile"'
+    notes: "McLean VA. Consulting spin-off from PwC federal practice."
+    enabled: true
+
+  # -- Consulting Firms (BA-heavy staffing) --
+
+  - name: Cognizant
+    careers_url: https://careers.cognizant.com
+    scan_method: websearch
+    scan_query: 'site:careers.cognizant.com "Business Analyst" OR "Scrum Master" remote OR Maryland OR Virginia'
+    notes: "IT consulting. Huge BA bench, remote options."
+    enabled: true
+
+  - name: Capgemini
+    careers_url: https://www.capgemini.com/us-en/careers
+    scan_method: websearch
+    scan_query: 'site:capgemini.com "Business Analyst" OR "Scrum Master" US remote'
+    notes: "Global consulting. Federal and commercial BA roles."
+    enabled: true
+
+  - name: Slalom
+    careers_url: https://www.slalom.com/careers
+    scan_method: websearch
+    scan_query: 'site:slalom.com/careers "Business Analyst" OR "Scrum Master" OR "Delivery Lead"'
+    notes: "Modern consulting. DC office. Good Agile culture."
+    enabled: true
+
+  - name: Infosys
+    careers_url: https://www.infosys.com/careers
+    scan_method: websearch
+    scan_query: 'site:infosys.com/careers "Business Analyst" OR "Scrum Master" US remote'
+    notes: "IT consulting. Large BA practice, remote roles available."
+    enabled: true
+
+  # -- Tech companies (remote-friendly, hire BAs) --
+
+  - name: Atlassian
+    careers_url: https://www.atlassian.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:atlassian.com/company/careers "Business Analyst" OR "Scrum Master" OR "Product Owner"'
+    notes: "Remote-friendly. Makes Jira/Confluence — relevant domain knowledge."
+    enabled: true
+
+  - name: Salesforce
+    careers_url: https://careers.salesforce.com
+    scan_method: websearch
+    scan_query: 'site:careers.salesforce.com "Business Analyst" OR "Scrum Master" OR "Business Systems"'
+    notes: "Large BA org. Remote + DC offices."
+    enabled: true
+
+  - name: Microsoft
+    careers_url: https://careers.microsoft.com
+    scan_method: websearch
+    scan_query: 'site:careers.microsoft.com "Business Analyst" OR "Scrum Master" OR "Program Manager" remote OR Maryland OR Virginia'
+    notes: "Huge BA/PM org. Reston VA campus."
+    enabled: true
+
+  - name: ServiceNow
+    careers_url: https://careers.servicenow.com
+    scan_method: websearch
+    scan_query: 'site:careers.servicenow.com "Business Analyst" OR "Scrum Master" OR "Business Process"'
+    notes: "Enterprise workflow platform. Remote roles available."
+    enabled: true
+
+  - name: Oracle
+    careers_url: https://www.oracle.com/careers
+    scan_method: websearch
+    scan_query: 'site:oracle.com/careers "Business Analyst" OR "Scrum Master" OR "ERP" remote OR Maryland'
+    notes: "ERP giant. Your Oracle Cloud experience is directly relevant."
+    enabled: true
+
+  - name: SAP
+    careers_url: https://jobs.sap.com
+    scan_method: websearch
+    scan_query: 'site:jobs.sap.com "Business Analyst" OR "Scrum Master" OR "Business Process" US'
+    notes: "ERP. Your SAP experience maps here. Remote + Reston VA."
+    enabled: true
+
+  - name: Workday
+    careers_url: https://workday.wd5.myworkdayjobs.com/Workday
+    scan_method: websearch
+    scan_query: 'site:workday.wd5.myworkdayjobs.com "Business Analyst" OR "Scrum Master" OR "Product Owner"'
+    notes: "ERP/HCM. BA roles tied to implementation & process."
+    enabled: true
+
+  - name: MongoDB
+    careers_url: https://job-boards.greenhouse.io/mongodb
+    api: https://boards-api.greenhouse.io/v1/boards/mongodb/jobs
+    notes: "Remote. Greenhouse-based, structured API access."
+    enabled: true
+
+  # -- Healthcare & Insurance (massive BA demand) --
+
+  - name: UnitedHealth Group / Optum
+    careers_url: https://careers.unitedhealthgroup.com
+    scan_method: websearch
+    scan_query: 'site:careers.unitedhealthgroup.com "Business Analyst" OR "Scrum Master" remote'
+    notes: "Largest US health insurer. Constant BA openings, mostly remote."
+    enabled: true
+
+  - name: Kaiser Permanente
+    careers_url: https://jobs.kaiserpermanente.org
+    scan_method: websearch
+    scan_query: 'site:jobs.kaiserpermanente.org "Business Analyst" OR "Scrum Master" OR "Business Systems"'
+    notes: "Healthcare. Mid-Atlantic region presence."
+    enabled: true
+
+  - name: CVS Health / Aetna
+    careers_url: https://jobs.cvshealth.com
+    scan_method: websearch
+    scan_query: 'site:jobs.cvshealth.com "Business Analyst" OR "Scrum Master" remote'
+    notes: "Healthcare/insurance. Remote BA roles, large Agile teams."
+    enabled: true
+
+  - name: Humana
+    careers_url: https://careers.humana.com
+    scan_method: websearch
+    scan_query: 'site:careers.humana.com "Business Analyst" OR "Scrum Master" remote'
+    notes: "Health insurance. Remote-first for IT roles."
+    enabled: true
+
+  # -- Financial Services (process-heavy, always hiring BAs) --
+
+  - name: Capital One
+    careers_url: https://www.capitalonecareers.com
+    scan_method: websearch
+    scan_query: 'site:capitalonecareers.com "Business Analyst" OR "Scrum Master" OR "Product Owner" McLean OR remote'
+    notes: "McLean VA HQ. Huge Agile org, strong BA pipeline."
+    enabled: true
+
+  - name: Freddie Mac
+    careers_url: https://careers.freddiemac.com
+    scan_method: websearch
+    scan_query: 'site:careers.freddiemac.com "Business Analyst" OR "Scrum Master" OR "Agile"'
+    notes: "McLean VA. GSE, stable BA roles, hybrid."
+    enabled: true
+
+  - name: Fannie Mae
+    careers_url: https://www.fanniemae.com/careers
+    scan_method: websearch
+    scan_query: 'site:fanniemae.com/careers "Business Analyst" OR "Scrum Master"'
+    notes: "DC metro. GSE, IT modernization, Agile transformation."
+    enabled: true
+
+  - name: Navy Federal Credit Union
+    careers_url: https://www.navyfederal.org/careers
+    scan_method: websearch
+    scan_query: 'site:navyfederal.org/careers "Business Analyst" OR "Scrum Master"'
+    notes: "Vienna VA. Largest CU in US. Strong IT org."
+    enabled: true
+
+  # -- EdTech & Education (your sector background) --
+
+  - name: PowerSchool
+    careers_url: https://www.powerschool.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:powerschool.com/company/careers "Business Analyst" OR "Scrum Master" OR "Product"'
+    notes: "K-12 EdTech. Your school district background is a direct fit."
+    enabled: true
+
+  - name: Blackboard / Anthology
+    careers_url: https://www.anthology.com/careers
+    scan_method: websearch
+    scan_query: 'site:anthology.com/careers "Business Analyst" OR "Scrum Master" OR "Product Owner"'
+    notes: "EdTech. DC area presence. LMS/SIS products."
+    enabled: true
+
+  - name: Instructure
+    careers_url: https://job-boards.greenhouse.io/instructure
+    api: https://boards-api.greenhouse.io/v1/boards/instructure/jobs
+    notes: "Canvas LMS. Remote. Greenhouse API access."
+    enabled: true
