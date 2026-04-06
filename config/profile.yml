@@ -1,0 +1,66 @@
+# Career-Ops Profile Configuration
+# Copy this file to config/profile.yml and fill in your details.
+# This is the single source of truth for your personal data across all modes.
+
+candidate:
+  full_name: "Keon Jenifer"
+  email: "KJ0042x@gmail.com"
+  phone: "+1-240-377-1151"
+  location: "Indian Head, MD"
+  linkedin: "https://www.linkedin.com/in/keon-jenifer-882a02239/"
+  portfolio_url: 
+  github: 
+  twitter: 
+target_roles:
+  # Your North Star roles — what you're optimizing for
+  primary:
+    - "Business Analyst"
+  # Archetypes help the evaluation system score fit
+  archetypes:
+    - name: "Senior Business Analyst"
+      level: "Senior/Staff"
+      fit: "primary"        # primary = dream role, secondary = good fit, adjacent = stretch
+    - name: "Systems Analyst"
+      level: "Mid-Senior"
+      fit: "secondary"
+    - name: "Technical Business Analyst"
+      level: "Mid-Senior"
+      fit: "primary"
+
+narrative:
+  # Your professional headline (1 line)
+  headline: "Seasoned Business Analyst with a passion for data-driven decision making"
+  # Your exit story — what makes you unique
+  exit_story: "Over 5 years of experience in analyzing complex business processes and delivering actionable insights. Proven track record of driving efficiency and improving decision-making through data analysis."
+  # Your top 3-5 superpowers
+  superpowers:
+    - "Data Analysis and Visualization"
+    - "Stakeholder Communication"
+    - "Process Improvement"
+    - "Requirements Gathering and Documentation"
+  # Proof points — projects, articles, case studies with measurable impact
+  proof_points:
+    - name:
+      url:
+      hero_metric: 
+    - name: 
+      url: 
+      hero_metric:
+  # Optional: dashboard/demo URL with credentials
+  # dashboard:
+  #   url: "https://janesmith.dev/demo"
+  #   password: "demo-2026"
+
+compensation:
+  target_range: "$90K-145K"     # Your target total comp
+  currency: "USD"
+  minimum: "$85K"               # Walk-away number
+  location_flexibility: "Remote preferred, 1 week/month on-site possible if located within 100 miles of Indian Head, MD"
+
+location:
+  country: "United States"
+  city: "Washington, D.C."
+  timezone: "EST"
+  visa_status: "No sponsorship needed"
+  # For remote roles outside your country:
+  # onsite_availability: "1 week/month in any city"
