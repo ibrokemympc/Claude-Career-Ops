@@ -67,7 +67,16 @@ async function generatePDF() {
     `file://$1.woff2')`
   );
 
-  const browser = await chromium.launch({ headless: true });
+  // Use system Chromium if the Playwright-managed browser isn't available
+  const SYSTEM_CHROMIUM = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
+  const launchOptions = { headless: true };
+  try {
+    const { existsSync } = await import('fs');
+    if (existsSync(SYSTEM_CHROMIUM)) {
+      launchOptions.executablePath = SYSTEM_CHROMIUM;
+    }
+  } catch (_) {}
+  const browser = await chromium.launch(launchOptions);
   const page = await browser.newPage();
 
   // Set content with file base URL for any relative resources

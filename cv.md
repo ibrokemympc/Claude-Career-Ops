@@ -1,6 +1,8 @@
-# KEON JENIFER
+# Keon Jenifer
 
-**Contact:** kj0042x@gmail.com
+**Email:** kj0042x@gmail.com | **Phone:** +1-240-377-1151
+**Location:** Indian Head, MD
+**LinkedIn:** https://www.linkedin.com/in/keon-jenifer-882a02239/
 
 ---
 
@@ -26,28 +28,32 @@ Business Analyst and Scrum Master with 5+ years of experience eliciting, analyzi
 
 ## Experience
 
-### Building Automation Scheduler | Prince George's County Public Schools — 2026 – Present
+### Building Automation Scheduler | Prince George's County Public Schools
+*2026 – Present*
 
 - Manage HVAC event scheduling and building automation systems across 200+ school facilities in Prince George's County.
 - Extract, consolidate, and analyze HVAC scheduling data from facility management systems to ensure operational efficiency across all sites.
 - Develop Python-based automation tools to streamline data extraction and reporting workflows, replacing manual processes.
 - Interface with Niagara-based building automation systems to coordinate scheduling with facility usage requirements.
 
-### Computer Analyst | Charles County Public Schools — June 2023 – 2026
+### Computer Analyst | Charles County Public Schools
+*June 2023 – 2026*
 
 - Provided Tier I/II technical support for desktops, laptops, printers, and network equipment across multiple school sites.
 - Imaged, configured, and deployed computers using SCCM; repaired hardware including out-of-warranty laptops.
 - Tracked service requests and asset inventory via Incident IQ and AMS; supported remote and on-site troubleshooting.
 
-### Senior Business Analyst / Scrum Master | Stack IT Solutions, Remote — May 2021 – March 2026
+### Senior Business Analyst / Scrum Master | Stack IT Solutions, Remote
+*May 2021 – March 2026*
 
-- Facilitate JAD and requirements-gathering sessions to define business rules, processes, and system requirements across cross-functional teams.
-- Produce BRDs, FRDs, use cases, process flow diagrams, and GUI mockups; model as-is and to-be business processes.
-- Monitor project progress using Agile methodologies, proactively resolving blockers and driving continuous improvement.
-- Leverage Power Apps/Power Automate to automate workflows; develop SQL queries and custom reports for ERP systems including Oracle Cloud and SAP.
-- Create SOP documentation for AWS services (IAM, EC2, S3, RDS, Lambda) and design scalable data solutions on GCP.
+- Facilitated JAD and requirements-gathering sessions to define business rules, processes, and system requirements across cross-functional teams.
+- Produced BRDs, FRDs, use cases, process flow diagrams, and GUI mockups; modeled as-is and to-be business processes.
+- Monitored project progress using Agile methodologies, proactively resolving blockers and driving continuous improvement.
+- Leveraged Power Apps/Power Automate to automate workflows; developed SQL queries and custom reports for ERP systems including Oracle Cloud and SAP.
+- Created SOP documentation for AWS services (IAM, EC2, S3, RDS, Lambda) and designed scalable data solutions on GCP.
 
-### Business Analyst | Stack IT Solutions, Bladensburg, MD — Nov 2020 – May 2021
+### Business Analyst | Stack IT Solutions, Bladensburg, MD
+*Nov 2020 – May 2021*
 
 - Elicited, documented, and translated stakeholder needs into clear business and system requirements.
 - Developed Requirement Management Plans detailing business problems, goals, assumptions, and user stories.
