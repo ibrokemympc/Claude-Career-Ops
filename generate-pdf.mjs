@@ -133,7 +133,16 @@ async function generatePDF() {
     console.log(`🧹 ATS normalization: ${totalReplacements} replacements (${breakdown})`);
   }
 
-  const browser = await chromium.launch({ headless: true });
+  // Use system Chromium if the Playwright-managed browser isn't available
+  const SYSTEM_CHROMIUM = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
+  const launchOptions = { headless: true };
+  try {
+    const { existsSync } = await import('fs');
+    if (existsSync(SYSTEM_CHROMIUM)) {
+      launchOptions.executablePath = SYSTEM_CHROMIUM;
+    }
+  } catch (_) {}
+  const browser = await chromium.launch(launchOptions);
   try {
     const page = await browser.newPage();
 
